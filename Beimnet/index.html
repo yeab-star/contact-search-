@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                <div class="logo-icon">C</div>
+
+                <div>
+                    <h1>Contact Explorer</h1>
+                    <p>User Directory</p>
+                </div>
+            </div>
+
+            <div class="header-info">
+                <span id="userCount">0 Contacts</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Search Section -->
+        <section class="search-section">
+
+            <div class="search-title">
+                <h2>Find Contacts</h2>
+                <p>Search through the user directory by first name.</p>
+            </div>
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by first name..."
+                >
+
+                <button id="clearSearch" class="clear-btn">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+ <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading contacts...</p>
+        </div>
+
+ <div id="errorMessage" class="message error-message">
+            <div class="message-icon">!</div>
+            <h3>Something went wrong</h3>
+            <p id="errorText">Unable to load users.</p>
+            <button id="retryButton">Try Again</button>
+        </div>
+       <div id="appContent" class="content-grid">
+
+            <section class="users-section">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>All Contacts</h2>
+                        <p id="resultsText">0 contacts found</p>
+                    </div>
+
+                </div>
+
+                <div id="usersContainer" class="users-grid"></div>
+
+                <div id="noResults" class="message no-results">
+
+                    <div class="message-icon">⌕</div>
+
+                    <h3>No contacts found</h3>
+
+                    <p>
+                        We couldn't find anyone matching your search.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <aside class="favorites-section">
+
+                <div class="favorites-header">
+
+                    <div class="favorite-title">
+
+                        <div class="heart-icon">♥</div>
+
+                        <div>
+                            <h2>Favorites</h2>
+                            <p id="favoriteCount">0 saved contacts</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="favoritesContainer" class="favorites-list"></div>
+
+
+                <div id="emptyFavorites" class="empty-favorites">
+
+                    <div class="empty-heart">♡</div>
+
+                    <h3>No favorites yet</h3>
+
+                    <p>
+                        Click the heart on a contact to add them to your favorites.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            Contact Explorer &copy; 2026
+        </p>
+
+        </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
